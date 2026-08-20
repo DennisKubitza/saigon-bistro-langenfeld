@@ -86,9 +86,6 @@ der (eigenen oder eingebundenen) `robots.txt` wieder streichen.
 
 ## Inhalte, die noch ergänzt werden sollten
 
-- **Öffnungszeiten** — wurden nicht bereitgestellt und sind daher bewusst nicht auf der Seite
-  aufgeführt, um keine falschen Angaben zu machen. Am einfachsten in `index.html` im Bereich
-  „Kontakt & Adresse" ergänzen.
 - Die Speisekarten-Preise wurden aus den gescannten Menükarten übertragen; bei mehreren Gerichten
   mit gleicher „wahlweise dazu"-Auswahl (Hühnerfleisch/Rind/Ente/Garnelen/Gemüse/Tofu/vegane
   Sesam-Ente) wurde die auf der Karte wiederkehrende Standard-Preistabelle verwendet. Bitte vor
