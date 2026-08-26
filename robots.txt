@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow:
 
-Sitemap: https://example.org/saigon/sitemap.xml
+Sitemap: https://saigon-bistro.de/sitemap.xml
