@@ -10,7 +10,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saigon-bistro.de/speisekarte.html">
 <link rel="icon" href="images/logo.webp" type="image/webp">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -137,27 +137,29 @@
 
   <div class="filter-bar" data-filter-bar>
     <div class="container">
-      <button class="filter-toggle" type="button" data-filter-toggle aria-expanded="false">
-        <span data-filter-toggle-label>Filter: Alle Gerichte</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="filter-scroll" data-filter-scroll>
-        <button class="chip active" data-filter="alle">Alle Gerichte</button>
-        <button class="chip" data-filter="vorspeisen">Vorspeisen</button>
-        <button class="chip" data-filter="phobun">Pho &amp; Bun</button>
-        <button class="chip" data-filter="nudeln">Nudeln &amp; Reis</button>
-        <button class="chip" data-filter="curry">Currys</button>
-        <button class="chip" data-filter="vietnamesisch">Traditionell Vietnamesisch</button>
-        <button class="chip" data-filter="chinathai">Chinesisch &amp; Thai</button>
-        <button class="chip" data-filter="kinder">Kindergerichte</button>
-        <span class="divider" style="width:1px; height:24px; background:var(--line-strong); align-self:center;"></span>
-        <button class="chip" data-filter="vegetarisch"><span class="dot"></span>Vegetarisch</button>
-        <button class="chip" data-filter="vegan"><span class="dot"></span>Vegan</button>
-        <button class="chip" data-filter="huhn"><span class="dot"></span>Hühnerfleisch</button>
-        <button class="chip" data-filter="rind"><span class="dot"></span>Rindfleisch</button>
-        <button class="chip" data-filter="ente"><span class="dot"></span>Ente</button>
-        <button class="chip" data-filter="garnelen"><span class="dot"></span>Garnelen</button>
-      </div>
+      <details class="filter-details" data-filter-details open>
+        <summary class="filter-toggle">
+          <span data-filter-toggle-label>Filter: Alle Gerichte</span>
+          <svg class="filter-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="filter-scroll" data-filter-scroll>
+          <button class="chip active" data-filter="alle">Alle Gerichte</button>
+          <button class="chip" data-filter="vorspeisen">Vorspeisen</button>
+          <button class="chip" data-filter="phobun">Pho &amp; Bun</button>
+          <button class="chip" data-filter="nudeln">Nudeln &amp; Reis</button>
+          <button class="chip" data-filter="curry">Currys</button>
+          <button class="chip" data-filter="vietnamesisch">Traditionell Vietnamesisch</button>
+          <button class="chip" data-filter="chinathai">Chinesisch &amp; Thai</button>
+          <button class="chip" data-filter="kinder">Kindergerichte</button>
+          <span class="divider" style="width:1px; height:24px; background:var(--line-strong); align-self:center;"></span>
+          <button class="chip" data-filter="vegetarisch"><span class="dot"></span>Vegetarisch</button>
+          <button class="chip" data-filter="vegan"><span class="dot"></span>Vegan</button>
+          <button class="chip" data-filter="huhn"><span class="dot"></span>Hühnerfleisch</button>
+          <button class="chip" data-filter="rind"><span class="dot"></span>Rindfleisch</button>
+          <button class="chip" data-filter="ente"><span class="dot"></span>Ente</button>
+          <button class="chip" data-filter="garnelen"><span class="dot"></span>Garnelen</button>
+        </div>
+      </details>
     </div>
   </div>
 
