@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Speisekarte: Pho, Currys &amp; Vegan — Saigon Bistro Langenfeld</title>
 <meta name="description" content="Die Speisekarte des Saigon Bistro Langenfeld: Pho, Currys, Wok-Gerichte – vegetarisch, vegan und mit Tofu. Asiatisch essen oder zum Mitnehmen bestellen.">
+<meta name="author" content="Dennis Kubitza, Dr. Lisa Baum &amp; Dennis Kubitza GbR (baum-kubi.com)">
+<link rel="author" href="https://dennis-kubitza.com/">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saigon-bistro.de/speisekarte.html">
 <link rel="icon" href="images/logo.webp" type="image/webp">
@@ -135,7 +137,11 @@
 
   <div class="filter-bar" data-filter-bar>
     <div class="container">
-      <div class="filter-scroll">
+      <button class="filter-toggle" type="button" data-filter-toggle aria-expanded="false">
+        <span data-filter-toggle-label>Filter: Alle Gerichte</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="filter-scroll" data-filter-scroll>
         <button class="chip active" data-filter="alle">Alle Gerichte</button>
         <button class="chip" data-filter="vorspeisen">Vorspeisen</button>
         <button class="chip" data-filter="phobun">Pho &amp; Bun</button>
