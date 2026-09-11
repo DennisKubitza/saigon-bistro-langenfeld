@@ -2,9 +2,10 @@
 
 Statische, mehrseitige Website für das Saigon Bistro (Langenfeld, Rheinland). Reines HTML/CSS/JS
 ohne eigenen Build-Schritt und ohne Abhängigkeiten — kann direkt über GitHub Pages gehostet werden.
-Ausnahme: `index.html`, `speisekarte.html` und `mittagsangebote.html` nutzen Jekyll, das
-GitHub-Pages-eigene, automatische Build-System, um bearbeitbare Inhalte (Hinweisbox, Preise, …)
-aus einfachen Textdateien ins HTML einzusetzen — kein zusätzliches Tooling nötig, siehe unten.
+Ausnahme: `index.html`, `speisekarte.html`, `mittagsangebote.html` und `anfahrt.html` nutzen
+Jekyll, das GitHub-Pages-eigene, automatische Build-System, um bearbeitbare Inhalte (Hinweisbox,
+Preise, …) aus einfachen Textdateien ins HTML einzusetzen — kein zusätzliches Tooling nötig, siehe
+unten.
 
 ## Seiten
 
@@ -16,13 +17,14 @@ aus einfachen Textdateien ins HTML einzusetzen — kein zusätzliches Tooling n�
 
 ## Lokal ansehen
 
-`anfahrt.html`, `impressum.html`, `datenschutz.html` und `404.html` lassen sich weiterhin einfach
-direkt im Browser öffnen (kein Server nötig).
+`impressum.html`, `datenschutz.html` und `404.html` lassen sich weiterhin einfach direkt im Browser
+öffnen (kein Server nötig).
 
-`index.html`, `speisekarte.html` und `mittagsangebote.html` enthalten Jekyll/Liquid-Syntax
-(`{% ... %}`), die **nur beim GitHub-Pages-Build verarbeitet wird** — ein einfacher lokaler
-HTTP-Server reicht dafür nicht mehr aus, und öffnet man die Datei direkt, sieht man die rohen
-`{{ ... }}`-Platzhalter statt der Preise/Texte. Für eine echte Vorschau lokal wird Jekyll benötigt:
+`index.html`, `speisekarte.html`, `mittagsangebote.html` und `anfahrt.html` enthalten
+Jekyll/Liquid-Syntax (`{% ... %}`), die **nur beim GitHub-Pages-Build verarbeitet wird** — ein
+einfacher lokaler HTTP-Server reicht dafür nicht mehr aus, und öffnet man die Datei direkt, sieht
+man die rohen `{{ ... }}`-Platzhalter statt der Preise/Texte. Für eine echte Vorschau lokal wird
+Jekyll benötigt:
 
 ```bash
 gem install jekyll
@@ -104,7 +106,7 @@ GitHub Pages rendert diese Dateien beim Jekyll-Build serverseitig in `index.html
 
 | Datei | Wofür | Beispielinhalt |
 |---|---|---|
-| `content/aktuelles.txt` | Hinweisbox ganz oben auf der Startseite für kurzfristige Mitteilungen (Betriebsferien, Feiertagsschließung). **Leer = Box wird nicht angezeigt.** | `Wir sind bis zum 25. Oktober in Betriebsferien. Danach sind wir wieder für Sie da.` |
+| `content/aktuelles.txt` | Hinweisbox ganz oben auf **allen vier Hauptseiten** (Startseite, Speisekarte, Mittagsmenü, Anfahrt) für kurzfristige Mitteilungen (Betriebsferien, Feiertagsschließung). Eine Datei steuert die Box auf allen vier Seiten gleichzeitig. **Leer = Box wird nirgends angezeigt.** | `Wir sind bis zum 25. Oktober in Betriebsferien. Danach sind wir wieder für Sie da.` |
 | `content/abholung.txt` | Abholzeiten im Lieferservice-Banner | `12:15–20:45 Uhr` |
 | `content/lieferung.txt` | Lieferzeiten im Lieferservice-Banner | `ab 14:00 Uhr (wochentags), ab 12:15 Uhr (Wochenende)` |
 | `content/oeffnungszeiten.txt` | Öffnungszeiten-Banner | `Dienstag – Freitag: 11:00 – 21:00 Uhr · Samstag & Sonntag: 12:00 – 21:00 Uhr · Montag: Ruhetag` |
@@ -157,9 +159,11 @@ echte Zeilenumbrüche matcht, wird dafür der gängige Jekyll-Kniff verwendet, e
 ```
 
 Das Rendering passiert vollständig serverseitig beim GitHub-Pages-Build, bevor die Seite an den
-Browser ausgeliefert wird. Alle anderen Seiten (`speisekarte.html`, `anfahrt.html`, …) bleiben
-unverändert reine, von Jekyll unangetastete HTML-Dateien, da nur `index.html` einen
-Front-Matter-Block besitzt.
+Browser ausgeliefert wird. Die „Aktuelles"-Box selbst ist in `index.html`, `speisekarte.html`,
+`mittagsangebote.html` und `anfahrt.html` identisch eingebettet (gleicher Liquid-Block, gleicher
+Aufruf von `content/aktuelles.txt`) — eine Änderung der Datei wirkt sich dadurch auf allen vier
+Seiten gleichzeitig aus. Nur `impressum.html`, `datenschutz.html` und `404.html` bleiben
+unverändert reine, von Jekyll unangetastete HTML-Dateien ohne Front-Matter-Block.
 
 ## Speisekarten-Preise (`_data/`-Ordner)
 

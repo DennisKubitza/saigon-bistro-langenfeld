@@ -377,6 +377,18 @@ button{ font-family:inherit; cursor:pointer; }
 .hero-cta-group{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
 .hero-cta-note{ font-size:.72rem; color:var(--muted); letter-spacing:.02em; }
 
+.aktuelles-bar{ background:var(--lacquer); border-bottom:1px solid var(--line-strong); }
+.aktuelles-inner{
+  display:flex; align-items:center; justify-content:center; gap:14px; padding:14px 24px; color:var(--cream);
+}
+.aktuelles-icon{ display:inline-flex; flex:none; color:var(--cream); }
+.aktuelles-icon svg{ width:22px; height:22px; }
+.aktuelles-text{ margin:0; font-size:.92rem; line-height:1.5; text-align:center; }
+.aktuelles-text strong{ font-family:var(--sans); font-weight:700; margin-right:.4em; }
+@media (max-width: 640px){
+  .aktuelles-inner{ flex-direction:column; text-align:center; gap:8px; padding:16px 24px; }
+}
+
 .trust-bar{ background:var(--panel); border-bottom:1px solid var(--line); }
 .trust-bar .hero-badges{
   margin-top:0; padding:11px 0; border-top:0; justify-content:center; gap:16px 40px;
