@@ -1,1 +1,1 @@
- Diese Nachricht ist als .txt hinterlegt und wird duch Github gerendered. Öffnungszeiten, Preise und Aktuelles können nun auch ohne HTML angepasst werden.
+
